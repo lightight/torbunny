@@ -110,7 +110,7 @@ Or add it as a Windows service with `tor.exe --service install -options -f torrc
 #### macOS / Linux
 
 ```bash
-git clone https://github.com/youruser/torbunny
+git clone https://github.com/lightight/torbunny
 cd torbunny
 python3 -m venv .venv
 source .venv/bin/activate
@@ -120,7 +120,7 @@ pip install -r requirements.txt
 #### Windows (Command Prompt)
 
 ```cmd
-git clone https://github.com/youruser/torbunny
+git clone https://github.com/lightight/torbunny
 cd torbunny
 python -m venv .venv
 .venv\Scripts\activate
