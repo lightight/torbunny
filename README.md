@@ -228,6 +228,20 @@ If bunny.net flags the account as suspended immediately after creation, torbunny
 
 ---
 
+## Tips To Stop Getting Suspended Easily
+
+bunny.net will often flag accounts automatically suspended upon suspicious behavior. This suspicious behavior may be
+
+1. Using the same tor ip
+
+2. Using the same email domain
+
+3. Using the same domain for cdn url generation
+
+Always double check these to ensure that you won't get suspended as quickly on their platform
+
+---
+
 ## File structure
 
 ```
