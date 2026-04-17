@@ -253,6 +253,8 @@ def _generate_password(first: str, last: str) -> str:
     Human-chosen password style.  Several templates, all anchored partly in the
     person's name so the password looks like something they'd actually pick.
     Never a random hex string.
+
+    Length is always ≥ 12 characters (bunny.net API requirement).
     """
     f = first.capitalize()
     l = last.capitalize()
@@ -290,11 +292,15 @@ def _generate_password(first: str, last: str) -> str:
     if not has_sp:
         pwd += "!"
 
-    # Keep length sensible (10–20)
-    if len(pwd) > 20:
-        pwd = pwd[:19] + sp
-    if len(pwd) < 10:
-        pwd += n3
+    # bunny.net API: "Passwords must be at least 12 characters"
+    _BUNNY_MIN = 12
+    _BUNNY_MAX = 72
+
+    if len(pwd) > _BUNNY_MAX:
+        pwd = pwd[:_BUNNY_MAX]
+
+    while len(pwd) < _BUNNY_MIN:
+        pwd += str(random.randint(0, 9))
 
     return pwd
 

@@ -596,6 +596,10 @@ def main(
         if password:
             creds.password = password
 
+        if len(creds.password) < 12:
+            _err("bunny.net requires passwords to be at least 12 characters.")
+            sys.exit(1)
+
         cred_table = Table(box=box.SIMPLE, show_header=False, padding=(0, 2))
         cred_table.add_column(style="dim")
         cred_table.add_column(style="bold white")
