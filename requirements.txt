@@ -1,0 +1,12 @@
+# torbunny dependencies
+# Install with: pip install -r requirements.txt
+#
+# requests[socks] bundles PySocks so the Tor SOCKS5 proxy works out of the box
+# on macOS, Linux, and Windows without any extra system packages.
+
+requests[socks]>=2.32.0
+Faker>=33.0.0
+rich>=13.0.0
+click>=8.1.0
+stem>=1.8.2
+Pillow>=10.0.0
